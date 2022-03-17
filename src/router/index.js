@@ -4,6 +4,7 @@ import SignUp from "../views/SignUp.vue";
 import LogIn from "../views/LogIn.vue";
 import LogOut from "../views/LogOut.vue";
 import ListingsIndex from "../views/ListingsIndex.vue";
+import ListingsNew from "../views/ListingsNew.vue";
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: "/listings",
     name: "ListingsIndex",
     component: ListingsIndex,
+  },
+  {
+    path: "/listings/new",
+    name: "ListingsNew",
+    component: ListingsNew,
   },
 ];
 

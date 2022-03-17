@@ -11,6 +11,8 @@
     <router-link to="/logout">Log Out</router-link>
     |
     <router-link to="/listings">Listings</router-link>
+    |
+    <router-link to="/listings/new">Create Listing</router-link>
   </nav>
   <router-view />
 </template>
