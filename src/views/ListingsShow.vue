@@ -4,7 +4,7 @@ export default {
   data: function () {
     return {
       listing: {},
-      // currentUserId: localStorage.user_id
+      // user_id: localStorage.user_id,
     };
   },
   created: function () {
@@ -32,8 +32,11 @@ export default {
     <img v-bind:src="listing.image_url" v-bind:alt="listing.brand" />
     <p>Model: {{ listing.model }}</p>
     <p>Description: {{ listing.description }}</p>
+    <!-- <div v-if="user_id == listing.user.id">
+      <button v-on:click="destroyListing()">Delete Listing</button>
+    </div> -->
     <!-- Authentication for destroy action still needed -->
-    <button v-on:click="destroyListing()">Delete Listing</button>
+
     <br />
     <router-link to="/listings">Back to all listings</router-link>
   </div>
