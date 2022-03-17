@@ -27,7 +27,7 @@ export default {
       <router-link v-bind:to="`/listings/${listing.id}`">
         <h2>{{ listing.brand }}</h2>
       </router-link>
-      <!-- <img v-bind:src="listing.image_url" v-bind:alt="listing.brand" /> -->
+      <img v-bind:src="listing.image_url" v-bind:alt="listing.brand" />
       <p>Model: {{ listing.model }}</p>
     </div>
   </div>
