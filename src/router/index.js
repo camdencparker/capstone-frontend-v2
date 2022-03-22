@@ -6,6 +6,8 @@ import LogOut from "../views/LogOut.vue";
 import ListingsIndex from "../views/ListingsIndex.vue";
 import ListingsNew from "../views/ListingsNew.vue";
 import ListingsShow from "../views/ListingsShow.vue";
+import ConversationsShow from "../views/ConversationsShow.vue";
+import ConversationsIndex from "../views/ConversationsIndex.vue";
 
 const routes = [
   {
@@ -50,6 +52,16 @@ const routes = [
     path: "/listings/:id",
     name: "ListingsShow",
     component: ListingsShow,
+  },
+  {
+    path: "/conversations",
+    name: "ConversationsIndex",
+    component: ConversationsIndex,
+  },
+  {
+    path: "/conversations/:id",
+    name: "ConversationsShow",
+    component: ConversationsShow,
   },
 ];
 

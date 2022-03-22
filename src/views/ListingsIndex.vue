@@ -4,6 +4,7 @@ export default {
   data: function () {
     return {
       listings: [],
+      brandFilter: "",
     };
   },
   created: function () {
@@ -17,12 +18,24 @@ export default {
       });
     },
   },
+  computed: {
+    filteredListings() {
+      return this.listings.filter((listing) => {
+        return listing.brand.toLowerCase().includes(this.brandFilter.toLowerCase());
+      });
+    },
+  },
 };
 </script>
 
 <template>
   <div class="home">
     <h1>All Listings</h1>
+    <h2>Search by Brand:</h2>
+    <input v-model="brandFilter" list="brands" />
+    <datalist id="brands">
+      <option v-for="listing in listings" v-bind:key="listing.id">{{ listing.brand }}</option>
+    </datalist>
     <div v-for="listing in listings" v-bind:key="listing.id">
       <router-link v-bind:to="`/listings/${listing.id}`">
         <h2>{{ listing.brand }}</h2>
