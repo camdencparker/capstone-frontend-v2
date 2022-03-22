@@ -49,25 +49,50 @@ export default {
 
 <template>
   <div class="conversations-show">
-    <p>{{ conversation.messages }}</p>
-    <p>Conversation With {{ conversation.partner.name }}</p>
-    <div v-for="message in conversation.messages" v-bind:key="message.id">
-      <p>{{ message.body }}</p>
+    <div class="Blog-area pt-100 pb-100">
+      <div class="container">
+        <div class="row flex-row-reverse">
+          <div class="col-lg-12">
+            <div class="blog-details-wrapper ml-20">
+              <div class="blog-comment-wrapper mt-55">
+                <h4 class="blog-dec-title">Conversation With {{ conversation.partner.name }}</h4>
+                <div
+                  v-for="message in conversation.messages"
+                  v-bind:key="message.id"
+                  class="single-comment-wrapper mt-35"
+                >
+                  <div class="blog-comment-img">
+                    <img :src="message.user.profile_pic" alt="" />
+                  </div>
+                  <div class="blog-comment-content">
+                    <h4>{{ message.user.name }}</h4>
+                    <span>{{ message.created_at }}</span>
+                    <p>
+                      {{ message.body }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="blog-reply-wrapper mt-50">
+                <h4 class="blog-dec-title">reply</h4>
+                <form class="blog-form" v-on:submit.prevent="createMessage()">
+                  <ul>
+                    <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+                  </ul>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="text-leave">
+                        <textarea placeholder="Message" v-model="newMessageParams.body"></textarea>
+                        <input type="submit" value="SEND MESSAGE" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <br />
-    <div>
-      <form v-on:submit.prevent="createMessage()">
-        <ul>
-          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-        </ul>
-        New Message
-        <br />
-        <input type="text" v-model="newMessageParams.body" />
-        <br />
-
-        <input type="submit" value="Create" />
-      </form>
-    </div>
-    <p>{{ user_id }}</p>
   </div>
 </template>
