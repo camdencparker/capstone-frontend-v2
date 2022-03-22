@@ -32,15 +32,12 @@ export default {
   <div class="home">
     <h1>All Listings</h1>
     <h2>Search by Brand:</h2>
-    <input v-model="brandFilter" list="brands" />
-    <datalist id="brands">
-      <option v-for="listing in listings" v-bind:key="listing.id">{{ listing.brand }}</option>
-    </datalist>
-    <div v-for="listing in listings" v-bind:key="listing.id">
+    <input type="text" v-model="brandFilter" placeholder="Search by Brand" />
+    <div v-for="listing in filteredListings" v-bind:key="listing.id">
+      <h2>{{ listing.brand }}</h2>
       <router-link v-bind:to="`/listings/${listing.id}`">
-        <h2>{{ listing.brand }}</h2>
+        <img v-bind:src="listing.image_url" v-bind:alt="listing.brand" />
       </router-link>
-      <img v-bind:src="listing.image_url" v-bind:alt="listing.brand" />
       <p>Model: {{ listing.model }}</p>
     </div>
   </div>

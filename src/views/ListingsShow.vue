@@ -26,6 +26,7 @@ export default {
       }
     },
     createConversation: function () {
+      this.newConversationParams.leaser_id = this.listing.owner.id;
       axios
         .post("/conversations", this.newConversationParams)
         .then((response) => {
