@@ -30,21 +30,34 @@ export default {
 </script>
 
 <template>
-  <div class="login">
-    <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div>
-        <label>Email:</label>
-        <input type="email" v-model="newSessionParams.email" />
+  <div class="login-register-wrapper">
+    <div class="login-register-tab-list nav">
+      <a class="active" data-bs-toggle="tab" href="#lg1">
+        <h4>login</h4>
+      </a>
+    </div>
+    <div class="tab-content">
+      <div id="lg1" class="tab-pane active">
+        <div class="login-form-container">
+          <div class="login-register-form">
+            <form v-on:submit.prevent="submit()">
+              <h1>Login</h1>
+              <ul>
+                <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+              </ul>
+              <div>
+                <label>Email:</label>
+                <input type="email" v-model="newSessionParams.email" />
+              </div>
+              <div>
+                <label>Password:</label>
+                <input type="password" v-model="newSessionParams.password" />
+              </div>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
       </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="newSessionParams.password" />
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+    </div>
   </div>
 </template>
