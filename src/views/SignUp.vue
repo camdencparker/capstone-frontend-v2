@@ -57,6 +57,10 @@ export default {
                 <input type="location" v-model="newUserParams.location" />
               </div>
               <div>
+                <label>Profile Picture:</label>
+                <input type="location" v-model="newUserParams.profile_pic" />
+              </div>
+              <div>
                 <label>Password:</label>
                 <input type="password" v-model="newUserParams.password" />
               </div>
