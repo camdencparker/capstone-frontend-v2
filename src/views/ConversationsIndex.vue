@@ -26,7 +26,7 @@ export default {
 <template>
   <div class="container">
     <div class="section-title-2 text-center mb-60">
-      <h2>Conversations</h2>
+      <h2>Your Conversations</h2>
       <p>Treat Others How You Want To Be Treated</p>
     </div>
     <div class="row">
