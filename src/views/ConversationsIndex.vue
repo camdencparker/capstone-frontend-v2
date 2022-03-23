@@ -24,14 +24,28 @@ export default {
 </script>
 
 <template>
-  <div class="conversations-index">
-    <h1>All Conversations</h1>
-    <div v-for="conversation in conversations" v-bind:key="conversation.id">
-      <p>{{ conversation.partner.name }}</p>
-
-      <img :src="conversation.partner.profile_pic" :alt="conversation.partner.name" />
-      <!-- <div v-for="message in conversations.messages"></div> -->
-      <router-link v-bind:to="`/conversations/${conversation.id}`">See Conversattion</router-link>
+  <div class="container">
+    <div class="section-title-2 text-center mb-60">
+      <h2>Conversations</h2>
+      <p>Treat Others How You Want To Be Treated</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6" v-for="conversation in conversations" v-bind:key="conversation.id">
+        <div class="team-wrapper mb-30">
+          <div class="team-img">
+            <a href="#">
+              <router-link v-bind:to="`/conversations/${conversation.id}`">
+                <img :src="conversation.partner.profile_pic" :alt="conversation.partner.name" />
+              </router-link>
+            </a>
+          </div>
+          <div class="team-content text-center">
+            <router-link v-bind:to="`/conversations/${conversation.id}`">
+              <h4>{{ conversation.partner.name }}</h4>
+            </router-link>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
