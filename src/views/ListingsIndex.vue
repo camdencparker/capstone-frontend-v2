@@ -32,19 +32,12 @@ export default {
   <div class="section-title text-center">
     <h2>FIND YOUR BIKE TODAY!</h2>
   </div>
-  <div class="Blog-area pt-100 pb-100 blog-no-sidebar">
-    <div class="sidebar-widget">
-      <h4 class="pro-sidebar-title">Find Your Motorcyle:</h4>
-      <div class="pro-sidebar-search mb-50 mt-25">
-        <form class="pro-sidebar-search-form" action="#">
-          <input type="text" v-model="brandFilter" placeholder="Search by Brand" />
-          <button>
-            <i class="pe-7s-search"></i>
-          </button>
-        </form>
-      </div>
-    </div>
+  <div class="Blog-area pt-25 pb-25 blog-no-sidebar">
     <div class="container">
+      <div class="form-outline">
+        <input type="text" v-model="brandFilter" placeholder="Search by Brand" />
+      </div>
+      <br />
       <div class="row">
         <div class="col-lg-12">
           <div class="row">
