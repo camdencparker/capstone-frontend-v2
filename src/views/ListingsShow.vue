@@ -45,6 +45,9 @@ export default {
 </script>
 
 <template>
+  <div class="section-title text-center">
+    <h2>FIND YOUR BIKE TODAY!</h2>
+  </div>
   <div class="shop-area pt-100 pb-100">
     <div class="container">
       <div class="row">
