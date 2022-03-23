@@ -92,22 +92,4 @@ export default {
       </div>
     </div>
   </div>
-  <div class="listings-show">
-    <h2>{{ listing.brand }}</h2>
-
-    <img v-bind:src="listing.image_url" v-bind:alt="listing.brand" />
-    <h3>Model: {{ listing.model }}</h3>
-    <p>Description: {{ listing.description }}</p>
-    <!-- <div v-if="user_id == listing.user.id">
-      <button v-on:click="destroyListing()">Delete Listing</button>
-    </div> -->
-    <!-- Authentication for destroy action still needed -->
-
-    <br />
-    <p>Owner: {{ listing.owner.name }}</p>
-    <button v-on:click="createConversation()">Message Owner</button>
-    <br />
-
-    <router-link to="/listings">Back to all listings</router-link>
-  </div>
 </template>
