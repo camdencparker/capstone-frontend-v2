@@ -29,6 +29,9 @@ export default {
 </script>
 
 <template>
+  <div class="section-title text-center">
+    <h2>FIND YOUR BIKE TODAY!</h2>
+  </div>
   <div class="Blog-area pt-100 pb-100 blog-no-sidebar">
     <div class="sidebar-widget">
       <h4 class="pro-sidebar-title">Find Your Motorcyle:</h4>
