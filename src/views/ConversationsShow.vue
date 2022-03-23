@@ -62,7 +62,7 @@ export default {
                   class="single-comment-wrapper mt-35"
                 >
                   <div class="blog-comment-img">
-                    <img :src="message.user.profile_pic" alt="" />
+                    <img :src="message.user.profile_pic" class="rounded-circle" alt="" />
                   </div>
                   <div class="blog-comment-content">
                     <h4>{{ message.user.name }}</h4>

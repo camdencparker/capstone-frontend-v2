@@ -35,7 +35,7 @@ export default {
           <div class="team-img">
             <a href="#">
               <router-link v-bind:to="`/conversations/${conversation.id}`">
-                <img :src="conversation.partner.profile_pic" :alt="conversation.partner.name" />
+                <img :src="conversation.partner.profile_pic" class="rounded-circle" :alt="conversation.partner.name" />
               </router-link>
             </a>
           </div>
