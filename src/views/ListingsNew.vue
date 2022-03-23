@@ -26,31 +26,44 @@ export default {
 </script>
 
 <template>
-  <div class="listings-new">
-    <h1>New Listing</h1>
-    <form v-on:submit.prevent="createListing()">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <br />
-      Brand:
-      <input type="text" v-model="newListingParams.brand" />
-      <br />
-      Model:
-      <input type="text" v-model="newListingParams.model" />
-      <br />
-      Year:
-      <input type="text" v-model="newListingParams.year" />
-      <br />
-      Description:
-      <input type="text" v-model="newListingParams.description" />
-      <br />
-      Image url:
-      <input type="text" v-model="newListingParams.image_url" />
-      <br />
-      Location:
-      <input type="text" v-model="newListingParams.location" />
-      <input type="submit" value="Create" />
-    </form>
+  <div class="login-register-wrapper">
+    <div class="login-register-tab-list nav">
+      <a class="active" data-bs-toggle="tab" href="#lg1">
+        <h4>Create New Listing</h4>
+      </a>
+    </div>
+    <div class="tab-content">
+      <div id="lg1" class="tab-pane active">
+        <div class="login-form-container">
+          <div class="login-register-form">
+            <form v-on:submit.prevent="createListing()">
+              <h5>Please Fill Out All Fields</h5>
+              <ul>
+                <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+              </ul>
+              <br />
+              Brand:
+              <input type="text" v-model="newListingParams.brand" />
+              <br />
+              Model:
+              <input type="text" v-model="newListingParams.model" />
+              <br />
+              Year:
+              <input type="text" v-model="newListingParams.year" />
+              <br />
+              Description:
+              <input type="text" v-model="newListingParams.description" />
+              <br />
+              Image url:
+              <input type="text" v-model="newListingParams.image_url" />
+              <br />
+              Location:
+              <input type="text" v-model="newListingParams.location" />
+              <input type="submit" value="Create" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
