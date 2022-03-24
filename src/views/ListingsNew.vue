@@ -43,22 +43,22 @@ export default {
               </ul>
               <br />
               Brand:
-              <input type="text" v-model="newListingParams.brand" />
+              <input type="text" v-model="newListingParams.brand" placeholder="Kawasaki" />
               <br />
               Model:
-              <input type="text" v-model="newListingParams.model" />
+              <input type="text" v-model="newListingParams.model" placeholder="Ninja 300" />
               <br />
               Year:
-              <input type="text" v-model="newListingParams.year" />
+              <input type="text" v-model="newListingParams.year" placeholder="2018" />
               <br />
               Description:
-              <input type="text" v-model="newListingParams.description" />
+              <input type="text" v-model="newListingParams.description" placeholder="Description of Bike" />
               <br />
               Image url:
-              <input type="text" v-model="newListingParams.image_url" />
+              <input type="text" v-model="newListingParams.image_url" placeholder="Link to Image of Bike" />
               <br />
               Location:
-              <input type="text" v-model="newListingParams.location" />
+              <input type="text" v-model="newListingParams.location" placeholder="City, State" />
               <input type="submit" value="Create" />
             </form>
           </div>
