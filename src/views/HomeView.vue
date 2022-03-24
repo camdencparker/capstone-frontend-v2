@@ -18,7 +18,7 @@
                 <br />
                 <p style="color: darkgoldenrod" class="animated">We Only Regret The Rides We Don't Take</p>
                 <div class="slider-btn slider-btn-round btn-hover">
-                  <a class="animated" href="/listings">FIND YOUR BIKE HERE</a>
+                  <a style="color: white" class="animated" href="/listings">FIND YOUR BIKE HERE</a>
                 </div>
               </div>
             </div>
