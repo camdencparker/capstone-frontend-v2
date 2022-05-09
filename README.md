@@ -1,5 +1,5 @@
 # Need-A-Bike Fronted
-This app is for the front end of the Need-A-Bike application which pulls data from the rails application for Need-A-Bike. 
+This app is for the front end of the Need-A-Bike application which pulls data from the rails application repository for Need-A-Bike. 
 
 ## Project setup
 ```
