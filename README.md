@@ -10,6 +10,8 @@ npm install
 ```
 npm run serve
 ```
+### Once App Is Running
+This is a simple CRUD app with the ability to create a new user, once logged in as a user you can create an add for a motorcycle that you are going to allow other people to message you about. You also are able to look at the other listings from other users and messsage them about their bikes. Changes are being made constantly to improve functionality and app overall.
 
 ### Compiles and minifies for production
 ```
